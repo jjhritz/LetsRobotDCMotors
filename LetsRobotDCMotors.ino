@@ -80,8 +80,8 @@ void loop()
                 right_motor(0);
                 reset_ending_timestamp();
                 break;
-            case 'b': // BOOST!
-                serial.println("BOOST!!!");
+            case 't': // BOOST!
+                Serial.println("BOOST!!!");
                 cspeed = bspeed;
                 set_boost_timestamp(60);
                 break;
