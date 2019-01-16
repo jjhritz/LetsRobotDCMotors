@@ -65,12 +65,12 @@ void loop()
             case 'r': // right
                 Serial.println("Right!");
                 left_motor(cspeed);
-                right_motor(hspeed);
+                right_motor(-hspeed);
                 reset_ending_timestamp();
                 break;
             case 'l': // left
                 Serial.println("Left!");
-                left_motor(hspeed);
+                left_motor(-hspeed);
                 right_motor(cspeed);
                 reset_ending_timestamp();
                 break;

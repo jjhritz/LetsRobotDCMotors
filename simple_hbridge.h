@@ -1,9 +1,9 @@
-#define MOT_A1 4
-#define MOT_A2 9
-#define MOT_B1 10
-#define MOT_B2 12
-#define PWM_A 14
-#define PWM_B 15
+#define MOT_A1 2
+#define MOT_A2 4
+#define MOT_B1 5
+#define MOT_B2 6
+#define PWM_A 3
+#define PWM_B 11
 
 void init_motors();
 void test();
