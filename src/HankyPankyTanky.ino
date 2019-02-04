@@ -1,4 +1,6 @@
 #include "simple_hbridge.h"
+#include "tcrt5000ir.h"
+
 
 int fspeed= 255;
 int hspeed = 175;
@@ -77,14 +79,14 @@ void loop() {
         left_motor(-fspeed); 
         right_motor(-hspeed);
         reset_ending_timestamp();
-        break;        
-        default:
-        delay(10);
+        break;
       case 't': // BOOST!
         //Serial.println("BOOST!!!");
         cspeed = bspeed;
-            set_boost_timestamp(60);
-            break;
+        set_boost_timestamp(60);
+        break;
+      default:
+        delay(10);
     }
   }
 }    
