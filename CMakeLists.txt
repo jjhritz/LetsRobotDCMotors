@@ -3,6 +3,12 @@ project(LetsRobotDCMotors)
 
 include(CMakeListsPrivate.txt)
 
+#set(SOURCE_FILES
+        #tcrt5000ir.cpp
+        #LetsRobotDCMotors.ino
+        #HankyPankyTanky.ino
+        #)
+
 add_custom_target(
     PLATFORMIO_BUILD ALL
     COMMAND ${PLATFORMIO_CMD} -f -c clion run
@@ -51,4 +57,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(${PROJECT_NAME} ${SRC_LIST} src/tcrt5000ir.cpp include/tcrt5000ir.h)
+add_executable(${PROJECT_NAME} ${SRC_LIST} src/statistics.cpp include/statistics.h src/IrLineEnforcement.cpp include/IrLineEnforcement.h)

@@ -10,21 +10,27 @@
 #define LETSROBOTDCMOTORS_TCRT5000IR_H
 
 
-class tcrt5000ir {
-    int pinIRd = 8;
-    int pinIRa = A0;
-    int pinLED = 9;
-    int LEDval = 0;
+class tcrt5000ir
+{
+    uint8_t pinIRd = 2;
+    uint8_t pinIRa = A0;
+    uint8_t pinLED = 9;
+    byte LEDval = 0;
 
     public:
         tcrt5000ir();
-        tcrt5000ir(int pinIRd, int pinIRa, int pinLED);
+        tcrt5000ir(uint8_t pinIRd, uint8_t pinIRa, uint8_t pinLED);
 
         int getIRa();
         int getIRd();
+        uint8_t getDPin();
+        uint8_t getAPin();
 
         int getLEDval();
-        void setLEDval(int val);
+        void setLEDval(byte val);
+
+        void testRead();
+
 
     private:
         void setPins();

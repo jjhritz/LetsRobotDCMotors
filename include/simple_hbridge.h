@@ -1,4 +1,6 @@
-#define MOT_A1 2
+#include <Arduino.h>
+
+#define MOT_A1 8
 #define MOT_A2 4
 #define MOT_B1 5
 #define MOT_B2 6

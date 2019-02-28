@@ -1,4 +1,5 @@
 #include "simple_hbridge.h"
+#include "tcrt5000ir.h"
 
 int fspeed= 255;
 int hspeed = 175;
